@@ -77,3 +77,11 @@ Tags: https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
 * Tags nachtraeglich setzen: git tag -a vNummer.Nummer -m 'Kommentar' ChecksumAusCommitOderTeilDavon
 * Tag veroeffentlichen (muss explizit erfolgen): git push origin [tagname]
 ** alternativ git push origin --tags laedt alle Tags hoch
+
+Branching: 
+* neuen Branch erstellen und darauf wechseln: git checkout -b BranchName
+** Merke: Branches koennen nur gewechselt werden, wenn die Staging area sauber ist! Siehe Stashing fuer weitere Details
+* Merging https://git-scm.com/book/de/v1/Git-Branching-Einfaches-Branching-und-Merging
+* auf Branch wechseln auf den gemerged werden soll: git merge BranchName
+** FastForward: der urspruengliche Branch hat sich nicht geaendert und der neue Branch kann einfach uerbernommen werden
+* 
