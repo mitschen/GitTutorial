@@ -35,4 +35,14 @@ Historie
 * git log zeigt Historie
 ** Option -p -<Nummer> zeigt die Aenderungen der letzten Nummer commits an
 ** Option --stat zeigt unter jedem Commit eine kurze Statistik an
-** Option --pretty=[oneline|short|full|fuller] aendert das Format der Ausgabe
+** Option --pretty=[oneline|short|full|fuller] aendert das Format der Ausgabe. Hier gibt es viele weitere Moeglichkeiten
+** Option --graph wird in Verbindung mit --pretty=format:"%h %s" verwendet um die Branch-Historie anzuzeigen
+** Option --since / --until schraenkt die Log-Historie ein
+
+Aenderungen Rueckgaengig machen
+* letzten Commit aendern: git commit --amend
+** der vorherige Commit wird korrigiert in Sinne von
+*** der Commit-Text kann geaendert werden
+*** etwaige vergessen Dateien koennen hinzugefuegt werden (alles was ich nach commit und vor commit --amend in die Staging-Area ueberfueht habe kommt hinzu)
+* Aenderungen aus StagingArea entfernen: git reset HEAD <Datei>
+* Aenderungen einer Datei rueckgaengig machen (Zustand des letzten Commits): git checkout -- <Datei>
