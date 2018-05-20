@@ -89,6 +89,10 @@ Branching: https://git-scm.com/book/de/v1/Git-Branching-Was-ist-ein-Branch%3F
 * auf Branch wechseln auf den gemerged werden soll: git merge BranchName
 ** FastForward: der urspruengliche Branch hat sich nicht geaendert und der neue Branch kann einfach uerbernommen werden
 * den alten, nicht mehr benötigten Branch loeschen ueber: git branch -d BranchName
+** Falls der Branch noch Aenderungen enthaelt, die nicht zurueckgefuehrt werden sollen, so muss man das Loeschen erzwingen: git branch -D BranchName
 * um Branch auf Master zu synchronisieren, auf Branch wechseln: git merge master
 ** das geht natürlich auch anders herum: git merge BranchName
 ** Wenn das MergeTool nicht automatisch den Conflict vermerkt, dann kann man manuell den Konflikt loesen und per git add und git commit um merge zu bestaetigen.
+* weitere Infos
+** git branch zeigt alle Branches an
+** git branch --merged zeigt alle Branchen mit merge Status an. Branches ohne * voran koennen ohne Probleme geloescht werden. Aehnlich mit --no-merged
