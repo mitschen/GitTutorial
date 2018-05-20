@@ -84,4 +84,4 @@ Branching:
 * Merging https://git-scm.com/book/de/v1/Git-Branching-Einfaches-Branching-und-Merging
 * auf Branch wechseln auf den gemerged werden soll: git merge BranchName
 ** FastForward: der urspruengliche Branch hat sich nicht geaendert und der neue Branch kann einfach uerbernommen werden
-* 
+* den alten, nicht mehr benötigten Branch loeschen ueber: git branch -d BranchName
