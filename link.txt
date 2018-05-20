@@ -78,8 +78,17 @@ Tags: https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
 * Tag veroeffentlichen (muss explizit erfolgen): git push origin [tagname]
 ** alternativ git push origin --tags laedt alle Tags hoch
 
+
 Branching: https://git-scm.com/book/de/v1/Git-Branching-Was-ist-ein-Branch%3F
 * HEAD ist der Zeiger, der auf den aktuell ausgecheckten Branch zeigt
 ** Master branch kennzeichnet die MainLine deines Repositories
 * neuen Branch erstellen (ABER nicht wechseln): git branch BranchName
 * Branch auschecken (HEAD darauf zeigen lassen): git checkout BranchName 
+** Merke: Branches koennen nur gewechselt werden, wenn die Staging area sauber ist! Siehe Stashing fuer weitere Details
+* Merging https://git-scm.com/book/de/v1/Git-Branching-Einfaches-Branching-und-Merging
+* auf Branch wechseln auf den gemerged werden soll: git merge BranchName
+** FastForward: der urspruengliche Branch hat sich nicht geaendert und der neue Branch kann einfach uerbernommen werden
+* den alten, nicht mehr benötigten Branch loeschen ueber: git branch -d BranchName
+* um Branch auf Master zu synchronisieren, auf Branch wechseln: git merge master
+** das geht natürlich auch anders herum: git merge BranchName
+** Wenn das MergeTool nicht automatisch den Conflict vermerkt, dann kann man manuell den Konflikt loesen und per git add und git commit um merge zu bestaetigen.
