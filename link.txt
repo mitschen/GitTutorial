@@ -60,6 +60,12 @@ Externe Repositories
 * Remote repository umbenennen: git remote rename AlterExternName NeuerExternName
 * Remote entfernen: git remote rm ExternName
 
+Lokale Repositorie auf Server erstellen
+* git clone --bare .git ProjektName.git exportiert das Repository als einfaches (leeres) repository. Ein ProjektName.git Ordner wird erzeugt
+* scp -r ProjektName.git user@server:/path/to/repositories/ kopiert den Inhalt auf den Server
+* rm -rf ProjektName.git loescht den lokalen Export
+* git remote add origin path/to/server verbindet lokales und remote repository
+
 Tags: https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
 * git tag listet alle Tags im Repository auf
 ** git tag -l 'pattern' sucht nach bestimmtem Tag
