@@ -59,3 +59,15 @@ Externe Repositories
 * Repository durchstoebern: remote show [RemoteName]
 * Remote repository umbenennen: git remote rename AlterExternName NeuerExternName
 * Remote entfernen: git remote rm ExternName
+
+Tags: https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
+* git tag listet alle Tags im Repository auf
+** git tag -l 'pattern' sucht nach bestimmtem Tag
+* speziellen Tag ansehen: git show vNummer.Nummer
+* Tag anlegen
+** kommentierte Tags: git tag -a vNummer.Nummer -m "Kommentar" legt tag Nummer.Nummer an
+** signierte Tags: git tag -s vNummer.Nummer -m 'Kommentar'
+** einfache Tags: git tag vNummer.Nummer
+* Tags nachtraeglich setzen: git tag -a vNummer.Nummer -m 'Kommentar' ChecksumAusCommitOderTeilDavon
+* Tag veroeffentlichen (muss explizit erfolgen): git push origin [tagname]
+** alternativ git push origin --tags laedt alle Tags hoch
