@@ -77,3 +77,9 @@ Tags: https://git-scm.com/book/de/v1/Git-Grundlagen-Tags
 * Tags nachtraeglich setzen: git tag -a vNummer.Nummer -m 'Kommentar' ChecksumAusCommitOderTeilDavon
 * Tag veroeffentlichen (muss explizit erfolgen): git push origin [tagname]
 ** alternativ git push origin --tags laedt alle Tags hoch
+
+Branching: https://git-scm.com/book/de/v1/Git-Branching-Was-ist-ein-Branch%3F
+* HEAD ist der Zeiger, der auf den aktuell ausgecheckten Branch zeigt
+** Master branch kennzeichnet die MainLine deines Repositories
+* neuen Branch erstellen (ABER nicht wechseln): git branch BranchName
+* Branch auschecken (HEAD darauf zeigen lassen): git checkout BranchName 
