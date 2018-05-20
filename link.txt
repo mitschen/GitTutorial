@@ -1,1 +1,38 @@
 https://git-scm.com/book/de/v2
+
+Begriffserklaerung:
+* untracked: Datei noch nicht von Git erfasst
+* unmodified: Datei ist Teil des Git repositories und nicht geaendert
+* modified: Datei ist Teil des Git repositories, wurde aber geaendert
+* staged: neue oder geaenderte Datei wurde vorgemerkt um committed zu werden
+==> diese Status-Informationen liefert git status
+
+Ignorieren von Dateien im Repository:
+* dies wird ueber das configuration file .gitignore eingestellt. 
+* Die Datei erwartet einen Liste von regulaeren Ausdruecken
+* ! als Negation
+* # als Kommentar
+
+Diff
+Aenderungen in der Staging Area koennen mittels git diff gereviewed werden.
+* liegt eine Aenderung bereits in der Staging-Area und wurde die lokale Kopie weiter veraendert, so zeigt die Diff den Unterschied zwischen Staging <-> lokaler Arbeitskopie
+* Um in diesem Fall den Unterschied zwischen Staging und Master zu sehen muss man git diff --staged oder git diff --cached aufrufen
+* Allgemein
+** + zeigt hinzugefuegte Zeile an
+** - zeigt geloeschte Zeile an
+** Aenderungen innerhalb einer Zeile werden durch [-<...>-]{+<...>+} dargestellt
+
+Dateien entfernen
+* Um Dateien aus der Versionskontroller zu entfernen rufe: git rm Dateiname
+* Datei in Arbeitsverzeichnis behalten aber aus der Versionkontroller entfernen: git rm --cached Dateiname
+* 
+
+Dateien verschieben
+* git mv Dateiname neuer_Dateiname
+* alternativ git rm und git add
+
+Historie
+* git log zeigt Historie
+** Option -p -<Nummer> zeigt die Aenderungen der letzten Nummer commits an
+** Option --stat zeigt unter jedem Commit eine kurze Statistik an
+** Option --pretty=[oneline|short|full|fuller] aendert das Format der Ausgabe
