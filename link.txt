@@ -46,3 +46,16 @@ Aenderungen Rueckgaengig machen
 *** etwaige vergessen Dateien koennen hinzugefuegt werden (alles was ich nach commit und vor commit --amend in die Staging-Area ueberfueht habe kommt hinzu)
 * Aenderungen aus StagingArea entfernen: git reset HEAD <Datei>
 * Aenderungen einer Datei rueckgaengig machen (Zustand des letzten Commits): git checkout -- <Datei>
+
+Externe Repositories
+* git remote zeigt den externen Server des aktuellen Projekts an. Hierbei wird der Kurzname dargestellt - bei default origin
+** git remote -v zeigt den vollstaendigen Pfad/ Namen an
+** es kann mehrere externe Server geben, die unterschiedliche Staende haben
+* git remote add <Name> <URL> fuegt ein neuen externen Server hinzu
+* git fetch <Name> laedt alle Aenderungen des Name Servers herunter
+** git fetch origin laedt alle Aenderungen des Defaults herunter
+** bei Tracking branch verwendet man git pull um herunterzuladen und zu mergen
+* Aenderungen hochladen: git push [RemoteName] [BranchName]
+* Repository durchstoebern: remote show [RemoteName]
+* Remote repository umbenennen: git remote rename AlterExternName NeuerExternName
+* Remote entfernen: git remote rm ExternName
