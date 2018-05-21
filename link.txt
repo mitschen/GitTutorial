@@ -53,9 +53,11 @@ Externe Repositories
 ** es kann mehrere externe Server geben, die unterschiedliche Staende haben
 * git remote add <Name> <URL> fuegt ein neuen externen Server hinzu
 * git fetch <Name> laedt alle Aenderungen des Name Servers herunter
+** Merke: es wird lediglich heruntergeladen, d.h. auf dem Lokalen Rechner im Git-Storage gespeichert. Es kommt zu keiner Anpassung deiner Arbeitskopie. Das muss explizit durch git merge getan werden
+*** git pull fuehrt git fetch und git merge aus
 ** git fetch origin laedt alle Aenderungen des Defaults herunter
 ** bei Tracking branch verwendet man git pull um herunterzuladen und zu mergen
-* Aenderungen hochladen: git push [RemoteName] [BranchName]
+* Aenderungen hochladen: git push [RemoteName] [BranchName] (unter Umstaenden auch neuen Branch Remote verfuegbar machen)
 * Repository durchstoebern: remote show [RemoteName]
 * Remote repository umbenennen: git remote rename AlterExternName NeuerExternName
 * Remote entfernen: git remote rm ExternName
@@ -96,3 +98,7 @@ Branching: https://git-scm.com/book/de/v1/Git-Branching-Was-ist-ein-Branch%3F
 * weitere Infos
 ** git branch zeigt alle Branches an
 ** git branch --merged zeigt alle Branchen mit merge Status an. Branches ohne * voran koennen ohne Probleme geloescht werden. Aehnlich mit --no-merged
+* Remote-Branch auf Server loeschen: git push RemoteName :RemoteBranchName
+** Beispiel git push origin :fixbranch
+
+Rebase vs. merge https://git-scm.com/book/de/v1/Git-Branching-Rebasing
